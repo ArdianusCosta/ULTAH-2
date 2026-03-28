@@ -61,7 +61,8 @@ export default function StorySection() {
                 alt={story.title}
                 fill
                 priority={i === 0}
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                sizes="(max-width: 768px) 75vw, (max-width: 1200px) 45vw, 35vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 pointer-events-none group-hover:opacity-40 transition-opacity duration-700" />
             </div>

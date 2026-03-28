@@ -51,7 +51,8 @@ export default function GallerySection() {
                   alt={`Gallery Image ${i + 1}`}
                   width={800}
                   height={1000}
-                  className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-1"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1"
                 />
               </motion.div>
             ))}

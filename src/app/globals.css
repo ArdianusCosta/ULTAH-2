@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme {
+  --color-primary: #ff0080;
+  --color-secondary: #7000ff;
+  --color-accent: #ff00ff;
+  --color-background: #050505;
+  --color-foreground: #ffffff;
+  
+  --font-serif: "Outfit", serif;
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #050505;
+  --foreground: #ffffff;
+  --primary: #ff0080;
+  --secondary: #7000ff;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lenis Recommended CSS */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(255, 0, 128, 0.5), 0 0 20px rgba(255, 0, 128, 0.3);
+  }
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .bg-cinematic-gradient {
+    background: radial-gradient(circle at center, #1a0b1a 0%, #050505 100%);
+  }
+  
+  .bg-radial-vignette {
+    background: radial-gradient(circle, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  }
+
+  .floating-blob {
+    filter: blur(80px);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+/* Scroll Animations Reveal */
+.reveal-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
 }

@@ -6,9 +6,10 @@ import { useRef } from 'react';
 const TEXT = "Halo Sasa, sekarang kamu sudah 17 tahun. Selamat ulang tahun ya. Semoga di usia yang baru ini, semua hal yang kamu harapkan bisa perlahan tercapai. Semoga kamu selalu diberi kesehatan, kebahagiaan, dan kekuatan untuk menjalani setiap langkah ke depan. Tetap jadi diri sendiri, dan jangan pernah lupa untuk selalu bersyukur sama Tuhan yaaa saaaa.";
 export default function RevealSection() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
+    target: textRef,
+    offset: ["start 0.8", "end 0.3"]
   });
 
   const words = TEXT.split(" ");
@@ -19,7 +20,10 @@ export default function RevealSection() {
       className="relative min-h-[150vh] w-full flex items-center justify-center py-40 bg-black/50"
     >
       <div className="max-w-4xl px-8 text-center">
-        <div className="flex flex-wrap justify-center gap-x-3 gap-y-4">
+        <div 
+          ref={textRef}
+          className="flex flex-wrap justify-center gap-x-3 gap-y-4"
+        >
           {words.map((word, i) => {
             const start = i / words.length;
             const end = (i + 1) / words.length;

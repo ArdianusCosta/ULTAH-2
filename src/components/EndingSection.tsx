@@ -38,7 +38,7 @@ export default function EndingSection() {
           <p className="text-xl md:text-2xl text-white/40 tracking-[0.3em] font-light italic">Forever & always.</p>
         </motion.div>
 
-        <motion.button
+        {/* <motion.button
           onClick={handleReplay}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -51,26 +51,26 @@ export default function EndingSection() {
             <RefreshCw className="w-6 h-6 text-white/60 group-hover:text-white transition-colors rotate-0 group-hover:rotate-[360deg] duration-1000" />
           </div>
           <span className="text-xs uppercase tracking-[0.3em] text-white/40 group-hover:text-white/80">Mulai Lagi</span>
-        </motion.button>
+        </motion.button> */}
       </div>
 
       {/* Floating Blobs (Small) */}
       <motion.div
-          animate={{
-            x: [0, 50, 0],
-            y: [0, -30, 0],
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-10 right-10 w-20 h-20 bg-secondary rounded-full blur-[40px] opacity-30"
-        />
-        <motion.div
-          animate={{
-            x: [0, -40, 0],
-            y: [0, 40, 0],
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-10 left-10 w-32 h-32 bg-primary rounded-full blur-[50px] opacity-30"
-        />
+        animate={{
+          x: [0, 50, 0],
+          y: [0, -30, 0],
+        }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-10 right-10 w-20 h-20 bg-secondary rounded-full blur-[40px] opacity-30"
+      />
+      <motion.div
+        animate={{
+          x: [0, -40, 0],
+          y: [0, 40, 0],
+        }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-10 left-10 w-32 h-32 bg-primary rounded-full blur-[50px] opacity-30"
+      />
     </section>
   );
 }

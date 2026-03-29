@@ -3,8 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
-const TEXT = "Setiap momen yang kita lalui bersama menjadi bagian dari cerita yang indah. Dari pagi yang tenang hingga obrolan di larut malam, setiap bisikan, tawa, dan tatapan telah membangun dunia yang kita tinggali hari ini. Ini adalah perjalanan penemuan, di mana setiap langkah mengungkapkan sesuatu yang baru tentang kita, sesuatu yang lebih dalam, sesuatu yang abadi.";
-
+const TEXT = "Halo Sasa, sekarang kamu sudah 17 tahun. Selamat ulang tahun ya. Semoga di usia yang baru ini, semua hal yang kamu harapkan bisa perlahan tercapai. Semoga kamu selalu diberi kesehatan, kebahagiaan, dan kekuatan untuk menjalani setiap langkah ke depan. Tetap jadi diri sendiri, dan jangan pernah lupa untuk selalu bersyukur sama Tuhan yaaa saaaa.";
 export default function RevealSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
